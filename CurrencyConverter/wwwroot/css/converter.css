@@ -1,0 +1,30 @@
+﻿body {
+    padding: 50px;
+}
+
+div.form-container {
+    width: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+    align-items: center;
+}
+
+div.input-container {
+    display:flex;
+    flex-flow: column nowrap;
+    width: 100%;
+}
+
+div.form-container > * {
+    margin: 8px;
+}
+
+button#convert {
+    width: 100px;
+}
+

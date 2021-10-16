@@ -1,0 +1,32 @@
+﻿
+@{
+   
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="~/css/converter.css"/>
+</head>
+<body>
+    <div class="form-container">
+        <div class="input-container">
+            <label>Amount (USD):</label>
+            <input type="text" name="amount" id="amount" placeholder="1" />
+        </div>
+        <div class="input-container">
+            <label>Exchange rate:</label>
+            <input type="text" name="exchange-rate" id="exchange-rate" placeholder="22760.50" />
+        </div>
+        <button id="convert">Convert</button>
+        <label class="result"></label>
+    </div>
+
+    @section Scripts {
+        <script type="text/javascript" src="~/js/converter.js"></script>
+    }
+</body>
+</html>
