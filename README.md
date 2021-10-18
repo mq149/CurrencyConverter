@@ -35,6 +35,8 @@ public object AjaxConvert(float amount, float exchangeRate)
     return result;
 }
 ```
+Hàm ```Convert``` được sử dụng cho form submit từ view ```Converter/Index.cshtml```.
+<br>
 Hàm ```AjaxConvert``` được sử dụng cho phương thức AJAX từ ```converter.js```.
 
 ### Model: ```Converter.cs```
@@ -44,17 +46,19 @@ Hàm ```AjaxConvert``` được sử dụng cho phương thức AJAX từ ```con
 | ```amount```      | thuộc tính           | float               | Giá trị tiền (USD) cần quy đổi                                     |
 | ```exchangeRate```| thuộc tính           | float               | Tỉ giá quy đổi                                                     |
 | ```result```      | thuộc tính           | float               | Kết quả quy đổi                                                    |
+| ```resultString```| thuộc tính           | string              | Kết quả quy đổi dạng string, format từ float sang string là "0,000.0000" (ví dụ: 1,234,567.8900). |
 | ```Converter```   | phương thức khởi tạo |                     | Khởi tạo amount và exchangeRate                                    |
 | ```convert```     | phương thức          | void                | Quy đổi dựa trên amount và exchangeRate và lưu kết quả vào result. |
 
 ### View: ```Converter/Index.cshtml```
 Các thành phần chính trong view:
-| Loại       | ID(#)/Class(.)       | Mô tả                          |
-|------------|----------------------|--------------------------------|
-|```input``` | ```#amount```        | Nhập giá trị cần quy đổi       |
-|```input``` | ```#exchange-rate``` | Nhập tỷ giá quy đổi            |
-|```button```| ```#convert```       | Nhấp để thực hiện quy đổi tiền |
-|```label``` | ```.result```        | Hiển thị kết quả quy đổi       |
+| Loại       | ID(#)/Class(.)/Type                      | Mô tả                                         |
+|------------|------------------------------------------|-----------------------------------------------|
+|```input``` | ```[type=text]``` ```#amount```          | Nhập giá trị cần quy đổi                      |
+|```input``` | ```[type=text]``` ```#exchange-rate```   | Nhập tỷ giá quy đổi                           |
+|```input``` | ```[type=submit]```                      | Nhấp để thực hiện quy đổi tiền (Form submit)  |
+|```button```| ```#convert```                           | Nhấp để thực hiện quy đổi tiền (AJAX)         |
+|```label``` | ```.result```                            | Hiển thị kết quả quy đổi                      |
 
 View có sử dụng stylesheet ```converter.css``` và script ```converter.js``` (jQuery).
 
