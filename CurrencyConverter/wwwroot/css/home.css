@@ -1,0 +1,32 @@
+﻿.main-container {
+    /*background-color: #0094ff;*/
+    /*height: 100vh;*/
+    padding: 30px 50px;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.profile {
+    width: 300px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 0px 40px;
+}
+
+.profile > * {
+    margin: 8px;
+}
+
+.profile > label {
+    font-weight: 300;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}

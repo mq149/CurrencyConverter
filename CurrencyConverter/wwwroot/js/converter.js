@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-
+    
     $('body').on('click', 'button#convert', function (e) {
         console.log('clicked');
         let amount = $('input#amount').val() || $('input#amount').attr('placeholder') || '';

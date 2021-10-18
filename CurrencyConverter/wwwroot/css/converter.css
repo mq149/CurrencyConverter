@@ -24,7 +24,44 @@ div.form-container > * {
     margin: 8px;
 }
 
-button#convert {
-    width: 100px;
+form#converter {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
 }
+
+form#converter > * {
+    margin: 8px;
+}
+
+input[type=text] {
+    height: 35px;
+    text-align: center;
+    border: hidden;
+    border-bottom: 1px solid black;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border-bottom: 1px solid #11A2FF;
+}
+
+.button {
+    width: 120px;
+    height: 35px;
+    border-radius: 17.5px;
+    border: hidden;
+    background-color: #11A2FF;
+    color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.button:hover {
+    background-color: #1092FF;
+}
+
+.button:active {
+    background-color: #0F89D7;
+}
+
 

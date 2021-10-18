@@ -20,12 +20,11 @@ namespace CurrencyConverter.Controllers
             return View("Index", converter);
         }
 
-        public object AjaxConvert(float amount, float exchangeRate)
+        public string AjaxConvert(float amount, float exchangeRate)
         {
             Models.Converter converter = new Models.Converter(amount, exchangeRate);
             converter.convert();
-            string result = "Result: " + converter.result.ToString("0,000.0000") + " VND";
-            return result;
+            return converter.resultString;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace CurrencyConverter.Models
         public float amount;
         public float exchangeRate;
         public float result;
+        public string resultString;
 
         public Converter(float amount, float exchangeRate)
         {
@@ -20,6 +21,7 @@ namespace CurrencyConverter.Models
         public void convert()
         {
             result = amount * exchangeRate;
+            resultString = "Result: " + result.ToString("0,000.0000") + " VND";
         }
     }
 }

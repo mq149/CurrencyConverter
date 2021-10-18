@@ -13,16 +13,24 @@
 </head>
 <body>
     <div class="form-container">
-        <div class="input-container">
-            <label>Amount (USD):</label>
-            <input type="text" name="amount" id="amount" placeholder="1" />
-        </div>
-        <div class="input-container">
-            <label>Exchange rate:</label>
-            <input type="text" name="exchange-rate" id="exchange-rate" placeholder="22760.50" />
-        </div>
-        <button id="convert">Convert</button>
-        <label class="result"></label>
+        <form id="converter" method="get" action="/converter/convert">
+            <div class="input-container">
+                <label>Amount (USD):</label>
+                <input type="text" name="amount" id="amount" placeholder="1" />
+            </div>
+            <div class="input-container">
+                <label>Exchange rate:</label>
+                <input type="text" name="exchangeRate" id="exchange-rate" placeholder="22760.50" />
+            </div>
+            <input type="submit" value="Convert" class="button">
+        </form>
+        <button id="convert" class="button">AJAX Convert</button>
+        <label class="result">
+            @if(Model != null)
+            {
+                @Model.resultString
+            }
+        </label>
     </div>
 
     @section Scripts {
